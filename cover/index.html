@@ -536,16 +536,16 @@ EDUCATION
       outputSection.classList.remove('visible');
 
       // Build prompt
-      let prompt = `You are generating a professional cover letter on behalf of Christopher Graves for a job application.\n\n`;
+      let prompt = `Hiring managers will be entering in information about a job, You are generating a professional cover letter on behalf of Christopher Graves for a job application.\n\n`;
       prompt += `Here is Christopher's resume:\n\n${RESUME}\n\n`;
       prompt += `The position being applied for is: ${jobTitle}\n`;
       if (company) prompt += `The company is: ${company}\n`;
       if (description) prompt += `\nJob description:\n${description}\n`;
-      prompt += `\nWrite a compelling, genuine, and concise cover letter (3-4 paragraphs) from Christopher to the hiring manager. `;
+      prompt += `\nWrite a compelling, genuine, and concise cover letter (3-4 paragraphs) about Christopher to the hiring manager. `;
       prompt += `Tailor it specifically to the role and company if provided. `;
       prompt += `Use a confident but not arrogant tone. Do not use generic filler phrases. `;
       prompt += `Format it as a proper letter starting with "Dear Hiring Manager," and ending with a disclaimer that this cover letter was written by a tool created by Christopher Graves, Not Christopher Graves himself. `;
-      prompt += `Do not include a date or address header — just the salutation through the signature.`;
+      prompt += `Do not include a date or address header — just a thank you for the hiring manager for using the tool. `;
 
       try {
         const response = await fetch(WORKER_URL, {
